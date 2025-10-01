@@ -257,24 +257,24 @@
             
             // Основной объект - икосаэдр
             const geometry = new THREE.IcosahedronGeometry(3, 1);
-            const material = new THREE.MeshPhongMaterial({ 
-                color: 0x00ffff,
-                shininess: 100,
+            const material = new THREE.MeshLambertMaterial({ 
+                color: 0xE45319,
+                // shininess: 100,
                 transparent: true,
                 opacity: 0.95,
-                specular: 0xffffff
+                // specular: 0xffffff
             });
             const mainObject = new THREE.Mesh(geometry, material);
             objectGroup.add(mainObject);
             
-            // Внутренний объект
+            // Внутренний объект - изменен цвет на #E45319
             const innerGeometry = new THREE.OctahedronGeometry(2, 1);
             const innerMaterial = new THREE.MeshPhongMaterial({ 
-                color: 0xff00ff,
+                color: 0xE45319, // Оранжевый цвет
                 shininess: 100,
                 transparent: true,
                 opacity: 0.9,
-                specular: 0xffffff
+                specular: 0xE45319
             });
             const innerObject = new THREE.Mesh(innerGeometry, innerMaterial);
             objectGroup.add(innerObject);
